@@ -1,0 +1,13 @@
+<div class="profile-container">
+    <h1>Tu perfil (sin datos sensibles)</h1>
+    <p><strong>Nombre:</strong> {{user.name}}</p>
+    <p><strong>Email:</strong> {{user.email}}</p>
+    <p><strong>Edad:</strong> {{user.age}}</p>
+
+    <button class="btn btn-edit-profile"><a href="/logout" style="text-decoration: none; color: inherit;">Cerrar
+            Sesión</a></button>
+    <script>
+        let userEmail = '{{user.email}}';
+        localStorage.setItem('currentUserEmail', userEmail);
+    </script>
+</div>
