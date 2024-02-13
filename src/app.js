@@ -1,5 +1,4 @@
 import express from 'express'
-import { password, db_name, PORT } from './env.js'
 import mongoose from "mongoose";
 import __dirname from './utils.js';
 import handlebars from 'express-handlebars';
@@ -21,6 +20,11 @@ import path from 'path';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js'
 import githubLoginViewRouter from './routes/github-login.views.router.js'
+import config from '../config.js';
+
+const password = config.PASSWORD;
+const db_name = config.DB_NAME;
+const PORT = config.PORT;
 
 const app = express()
 
